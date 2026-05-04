@@ -18,7 +18,7 @@ const Posts = (() => {
 
   function renderPost(post) {
     const user = Auth.getUser();
-    const isOwn = user && user.id === post.userId;
+    const isAdmin = user && user.role === 'admin';
     const isDriver = post.authorRole === 'driver';
 
     const card = document.createElement('div');
@@ -53,7 +53,7 @@ const Posts = (() => {
         <button class="action-btn comment-btn" data-id="${post._id}">
           💬 <span>${post.commentCount || 0}</span>
         </button>
-        ${isOwn ? `<button class="action-btn delete-btn" data-id="${post._id}" title="Delete post">🗑</button>` : ''}
+        ${isAdmin ? `<button class="action-btn delete-btn" data-id="${post._id}" title="Delete post (Admin)">🗑</button>` : ''}
       </div>
     `;
 
@@ -157,7 +157,7 @@ const Posts = (() => {
           <div class="comment-text">${escapeHtml(c.content)}</div>
           <div class="comment-meta">
             <span>${timeAgo(c.createdAt)}</span>
-            ${user && user.id === c.userId ? `<button class="comment-delete" data-id="${c._id}">Delete</button>` : ''}
+            ${user && user.role === 'admin' ? `<button class="comment-delete" data-id="${c._id}">Delete</button>` : ''}
           </div>
         </div>
       `;

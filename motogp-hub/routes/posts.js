@@ -53,11 +53,11 @@ router.post('/', authMiddleware, (req, res) => {
 
 // ─── DELETE POST ────────────────────────────────────────────
 router.delete('/:id', authMiddleware, (req, res) => {
+  // ADMIN ONLY – regular users cannot delete posts
+  if (req.user.role !== 'admin') return res.status(403).json({ error: 'Admin only' });
+
   db.posts.findOne({ _id: req.params.id }, (err, post) => {
     if (err || !post) return res.status(404).json({ error: 'Post not found' });
-    const isOwn   = post.userId === req.user.id;
-    const isAdmin = req.user.role === 'admin';
-    if (!isOwn && !isAdmin) return res.status(403).json({ error: 'Not authorized' });
 
     db.posts.remove({ _id: req.params.id }, {}, (err) => {
       if (err) return res.status(500).json({ error: 'Failed to delete post' });
@@ -137,11 +137,11 @@ router.post('/:id/comments', authMiddleware, (req, res) => {
 });
 
 router.delete('/:postId/comments/:commentId', authMiddleware, (req, res) => {
+  // ADMIN ONLY – regular users cannot delete comments
+  if (req.user.role !== 'admin') return res.status(403).json({ error: 'Admin only' });
+
   db.comments.findOne({ _id: req.params.commentId }, (err, comment) => {
     if (err || !comment) return res.status(404).json({ error: 'Comment not found' });
-    const isOwn   = comment.userId === req.user.id;
-    const isAdmin = req.user.role === 'admin';
-    if (!isOwn && !isAdmin) return res.status(403).json({ error: 'Not authorized' });
 
     db.comments.remove({ _id: req.params.commentId }, {}, (err) => {
       if (err) return res.status(500).json({ error: 'Failed to delete comment' });

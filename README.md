@@ -1,6 +1,6 @@
 # MotoGP Hub 🏁
 
-https://motogp-hub-1.onrender.com/
+https://motogp-hub-production.up.railway.app/
 
 MotoGP Hub is a simple social platform built around MotoGP riders and fans.  
 Users can post updates, follow riders, like posts, and join discussions around races and riders.

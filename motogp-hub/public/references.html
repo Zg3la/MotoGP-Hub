@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>References – MotoGP Social Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    body { background: var(--bg); color: var(--text); min-height: 100vh; }
+    .ref-page { max-width: 860px; margin: 0 auto; padding: 120px 24px 60px; }
+    .ref-back { display: inline-flex; align-items: center; gap: 8px; color: var(--accent); text-decoration: none; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; letter-spacing: 1px; margin-bottom: 40px; }
+    .ref-back:hover { opacity: 0.8; }
+    .ref-title { font-family: 'Barlow Condensed', sans-serif; font-size: 3rem; font-weight: 900; color: var(--text); letter-spacing: 2px; margin-bottom: 8px; }
+    .ref-sub { color: var(--text-muted); margin-bottom: 48px; font-size: 1.05rem; }
+    .ref-section { margin-bottom: 40px; }
+    .ref-section-title { font-family: 'Barlow Condensed', sans-serif; font-size: 1.3rem; font-weight: 700; color: var(--accent); letter-spacing: 2px; text-transform: uppercase; border-bottom: 1px solid var(--border); padding-bottom: 10px; margin-bottom: 20px; }
+    .ref-item { background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 18px 22px; margin-bottom: 12px; }
+    .ref-item-title { font-weight: 600; margin-bottom: 4px; color: var(--text); }
+    .ref-item-detail { font-size: 0.9rem; color: var(--text-muted); }
+    .ref-item a { color: var(--accent); text-decoration: none; }
+    .ref-item a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">
+        <span class="logo-icon">🏁</span>
+        <span class="logo-text">MotoGP<span class="logo-accent">HUB</span></span>
+      </a>
+      <div class="nav-links">
+        <a href="/" class="nav-link">Feed</a>
+        <a href="/?page=drivers" class="nav-link">Drivers</a>
+        <a href="/references.html" class="nav-link active">References</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="ref-page">
+    <a href="/" class="ref-back">← Back to Hub</a>
+    <h1 class="ref-title">REFERENCES</h1>
+    <p class="ref-sub">Sources and technologies used in the development of MotoGP Social Hub</p>
+
+    <div class="ref-section">
+      <div class="ref-section-title">Backend Technologies</div>
+      <div class="ref-item">
+        <div class="ref-item-title">Node.js</div>
+        <div class="ref-item-detail">JavaScript runtime environment. <a href="https://nodejs.org" target="_blank">https://nodejs.org</a></div>
+      </div>
+      <div class="ref-item">
+        <div class="ref-item-title">Express.js</div>
+        <div class="ref-item-detail">Minimalist web framework for Node.js. <a href="https://expressjs.com" target="_blank">https://expressjs.com</a></div>
+      </div>
+      <div class="ref-item">
+        <div class="ref-item-title">NeDB (Datastore)</div>
+        <div class="ref-item-detail">Embedded JavaScript database (MongoDB-like API, file-based). <a href="https://github.com/louischatriot/nedb" target="_blank">https://github.com/louischatriot/nedb</a></div>
+      </div>
+      <div class="ref-item">
+        <div class="ref-item-title">jsonwebtoken</div>
+        <div class="ref-item-detail">JSON Web Token implementation for authentication. <a href="https://github.com/auth0/node-jsonwebtoken" target="_blank">https://github.com/auth0/node-jsonwebtoken</a></div>
+      </div>
+      <div class="ref-item">
+        <div class="ref-item-title">bcryptjs</div>
+        <div class="ref-item-detail">Password hashing library. <a href="https://github.com/dcodeIO/bcrypt.js" target="_blank">https://github.com/dcodeIO/bcrypt.js</a></div>
+      </div>
+      <div class="ref-item">
+        <div class="ref-item-title">cors</div>
+        <div class="ref-item-detail">Cross-origin resource sharing middleware for Express. <a href="https://github.com/expressjs/cors" target="_blank">https://github.com/expressjs/cors</a></div>
+      </div>
+    </div>
+
+    <div class="ref-section">
+      <div class="ref-section-title">Frontend Technologies</div>
+      <div class="ref-item">
+        <div class="ref-item-title">HTML5</div>
+        <div class="ref-item-detail">Semantic markup for the Single Page Application structure. <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">MDN Web Docs</a></div>
+      </div>
+      <div class="ref-item">
+        <div class="ref-item-title">CSS3 (Custom)</div>
+        <div class="ref-item-detail">Custom responsive design with CSS variables, Flexbox and Grid. No frameworks used. <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">MDN Web Docs</a></div>
+      </div>
+      <div class="ref-item">
+        <div class="ref-item-title">Vanilla JavaScript (ES6+)</div>
+        <div class="ref-item-detail">Client-side logic, AJAX (Fetch API), DOM manipulation, form validation. <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">MDN Web Docs</a></div>
+      </div>
+      <div class="ref-item">
+        <div class="ref-item-title">Google Fonts – Barlow Condensed & Barlow</div>
+        <div class="ref-item-detail">Typography. <a href="https://fonts.google.com/specimen/Barlow+Condensed" target="_blank">https://fonts.google.com</a></div>
+      </div>
+    </div>
+
+    <div class="ref-section">
+      <div class="ref-section-title">Hosting &amp; Deployment</div>
+      <div class="ref-item">
+        <div class="ref-item-title">Render.com</div>
+        <div class="ref-item-detail">Recommended free hosting platform for Node.js apps. <a href="https://render.com" target="_blank">https://render.com</a></div>
+      </div>
+      <div class="ref-item">
+        <div class="ref-item-title">Railway.app</div>
+        <div class="ref-item-detail">Alternative PaaS platform for Node.js deployment. <a href="https://railway.app" target="_blank">https://railway.app</a></div>
+      </div>
+    </div>
+
+    <div class="ref-section">
+      <div class="ref-section-title">Learning Resources</div>
+      <div class="ref-item">
+        <div class="ref-item-title">MDN Web Docs</div>
+        <div class="ref-item-detail">Comprehensive documentation for web technologies. <a href="https://developer.mozilla.org" target="_blank">https://developer.mozilla.org</a></div>
+      </div>
+      <div class="ref-item">
+        <div class="ref-item-title">Express.js Documentation</div>
+        <div class="ref-item-detail">Official guide for building REST APIs with Express. <a href="https://expressjs.com/en/guide/routing.html" target="_blank">https://expressjs.com/en/guide/routing.html</a></div>
+      </div>
+      <div class="ref-item">
+        <div class="ref-item-title">JWT.io</div>
+        <div class="ref-item-detail">Introduction to JSON Web Tokens. <a href="https://jwt.io/introduction" target="_blank">https://jwt.io/introduction</a></div>
+      </div>
+      <div class="ref-item">
+        <div class="ref-item-title">MotoGP Official Website</div>
+        <div class="ref-item-detail">Source for rider information, teams and season data. <a href="https://www.motogp.com" target="_blank">https://www.motogp.com</a></div>
+      </div>
+    </div>
+
+    <div class="ref-section">
+      <div class="ref-section-title">Design Inspiration</div>
+      <div class="ref-item">
+        <div class="ref-item-title">MotoGP Official Visual Identity</div>
+        <div class="ref-item-detail">Color schemes, typography style and branding reference from MotoGP media materials.</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

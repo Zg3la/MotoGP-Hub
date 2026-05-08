@@ -225,6 +225,7 @@ window.addEventListener('DOMContentLoaded', async () => {
   Posts.init();
   Router.init();
   LiveDiscussion.init();
+  Calendar.init();
 
   // Initial page load
   Router.navigate('feed');

@@ -1186,3 +1186,127 @@ img { max-width: 100%; }
   0%,100% { box-shadow: 0 0 0 0 rgba(255,60,0,0.25); }
   50% { box-shadow: 0 0 0 6px rgba(255,60,0,0); }
 }
+
+/* ===================== SEASON TITLE CLICKABLE ===================== */
+.sidebar-title-clickable {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: color 0.2s;
+  user-select: none;
+}
+.sidebar-title-clickable:hover { color: var(--accent); }
+.sidebar-title-arrow {
+  font-size: 1.1rem;
+  color: var(--accent);
+  transition: transform 0.2s;
+  font-weight: 400;
+}
+.sidebar-title-clickable:hover .sidebar-title-arrow { transform: translateX(3px); }
+
+/* ===================== CALENDAR MODAL ===================== */
+.modal-calendar {
+  max-height: 85vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.modal-calendar .modal-header { margin-bottom: 20px; }
+.calendar-grid {
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-right: 4px;
+}
+.cal-round {
+  display: grid;
+  grid-template-columns: 36px 40px 1fr auto;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--card-bg);
+  transition: border-color 0.2s, background 0.2s;
+}
+.cal-round:hover { border-color: var(--border-strong); background: var(--card-hover); }
+.cal-done { opacity: 0.7; }
+.cal-live {
+  border-color: rgba(255,60,0,0.4) !important;
+  background: rgba(255,60,0,0.06) !important;
+  opacity: 1 !important;
+}
+.cal-round-num {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-dim);
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+.cal-flag { font-size: 1.5rem; text-align: center; }
+.cal-info { min-width: 0; }
+.cal-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.cal-circuit {
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  margin-top: 1px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.cal-dates {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  margin-top: 2px;
+}
+.cal-winner {
+  font-size: 0.76rem;
+  color: var(--gold);
+  margin-top: 3px;
+  font-weight: 600;
+}
+.cal-status { text-align: right; flex-shrink: 0; }
+.cal-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+.cal-badge-done {
+  background: rgba(74,222,128,0.1);
+  color: var(--like);
+  border: 1px solid rgba(74,222,128,0.25);
+}
+.cal-badge-live {
+  background: rgba(255,60,0,0.15);
+  color: var(--accent);
+  border: 1px solid rgba(255,60,0,0.35);
+}
+.cal-badge-upcoming {
+  background: rgba(255,255,255,0.05);
+  color: var(--text-dim);
+  border: 1px solid var(--border);
+}
+@media (max-width: 560px) {
+  .cal-round { grid-template-columns: 28px 32px 1fr; }
+  .cal-status { display: none; }
+  .cal-name { font-size: 0.88rem; }
+}

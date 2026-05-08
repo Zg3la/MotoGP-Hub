@@ -10,6 +10,8 @@ const db = {
   comments: new Datastore({ filename: path.join(dbPath, 'comments.db'), autoload: true }),
   likes: new Datastore({ filename: path.join(dbPath, 'likes.db'), autoload: true }),
   follows: new Datastore({ filename: path.join(dbPath, 'follows.db'), autoload: true }),
+  live_discussions: new Datastore({ filename: path.join(dbPath, 'live_discussions.db'), autoload: true }),
+  live_messages: new Datastore({ filename: path.join(dbPath, 'live_messages.db'), autoload: true }),
 };
 
 db.users.ensureIndex({ fieldName: 'username', unique: true });

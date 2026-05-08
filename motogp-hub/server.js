@@ -13,6 +13,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/posts', require('./routes/posts'));
 app.use('/api/users', require('./routes/users'));
+app.use('/api/live', require('./routes/live'));
 
 // Serve frontend for all non-API routes (SPA)
 app.get('*', (req, res) => {

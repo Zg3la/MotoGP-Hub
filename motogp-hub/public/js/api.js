@@ -111,4 +111,24 @@ const api = {
 
   updateBio: (bio) =>
     api._req('PATCH', '/users/me/bio', { bio }),
+
+  // =========================================================
+  // LIVE DISCUSSION
+  // =========================================================
+  getDiscussion: () =>
+    api._req('GET', '/live/discussion'),
+
+  openDiscussion: (title) =>
+    api._req('POST', '/live/discussion', { title }),
+
+  closeDiscussion: () =>
+    api._req('DELETE', '/live/discussion'),
+
+  getMessages: (since) => {
+    const q = since ? `?since=${encodeURIComponent(since)}` : '';
+    return api._req('GET', `/live/discussion/messages${q}`);
+  },
+
+  sendMessage: (discussionId, content) =>
+    api._req('POST', '/live/discussion/messages', { discussionId, content }),
 };

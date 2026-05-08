@@ -2,6 +2,22 @@
 // APP – Router, profile page, init
 // ============================================================
 
+// ---- TOGGLE NEWS ARTICLE ----
+function toggleArticle(id) {
+  const article = document.getElementById(id);
+  if (!article) return;
+  article.classList.toggle('expanded');
+  const icon = article.querySelector('.news-toggle-icon');
+  const label = article.querySelector('.news-toggle-btn');
+  if (article.classList.contains('expanded')) {
+    if (icon) icon.textContent = '▴';
+    if (label) label.innerHTML = '<span class="news-toggle-icon">▴</span> Collapse';
+  } else {
+    if (icon) icon.textContent = '▾';
+    if (label) label.innerHTML = '<span class="news-toggle-icon">▾</span> Read article';
+  }
+}
+
 // ---- TOAST ----
 function showToast(msg, type = '') {
   const t = document.getElementById('toast');
@@ -35,6 +51,10 @@ const Router = (() => {
     } else if (page === 'news') {
       document.getElementById('page-news').classList.add('active');
       document.querySelector('[data-page="news"]')?.classList.add('active');
+    } else if (page === 'teams') {
+      document.getElementById('page-teams').classList.add('active');
+      document.querySelector('[data-page="teams"]')?.classList.add('active');
+      Teams.loadTeams();
     } else if (page === 'admin') {
       const user = Auth.getUser();
       if (!user || user.role !== 'admin') { Router.navigate('feed'); return; }
@@ -204,6 +224,7 @@ window.addEventListener('DOMContentLoaded', async () => {
   Auth.init();
   Posts.init();
   Router.init();
+  LiveDiscussion.init();
 
   // Initial page load
   Router.navigate('feed');

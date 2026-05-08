@@ -31,6 +31,7 @@
         <div class="nav-links" id="nav-links">
           <a href="#" class="nav-link active" data-page="feed">Feed</a>
           <a href="#" class="nav-link" data-page="drivers">Drivers</a>
+          <a href="#" class="nav-link" data-page="teams">Teams</a>
           <a href="#" class="nav-link" data-page="news">News</a>
           <a href="#" class="nav-link admin-only" data-page="admin" id="admin-nav-link" style="display:none;">⚙ Admin</a>
         </div>
@@ -123,6 +124,7 @@
                 </div>
               </div>
               <a href="https://www.motogp.com/en/calendar/2026/event/france/4237f175-c6a4-4d1e-b658-82962baf3fa3/race-centre" target="_blank" rel="noopener" class="btn btn-primary session-btn">🏁 Race Centre</a>
+              <button class="btn btn-ghost session-btn" id="open-live-discussion-btn" style="margin-top:8px;">💬 Live Discussion</button>
             </div>
           </aside>
         </div>
@@ -151,46 +153,101 @@
         <div class="page-inner">
           <div class="section-header">
             <h1 class="section-title">LATEST NEWS</h1>
-            <p class="section-sub">Fresh from MotoGP.com</p>
+            <p class="section-sub">Fresh from MotoGP.com · Updated May 8, 2026</p>
           </div>
-          <div class="news-grid">
+          <div class="news-list">
 
-            <a class="news-card" href="https://www.motogp.com/en/news/2026/05/07/media-day-dispatch-hot-off-the-press-from-le-mans-on-thursday/1064611" target="_blank" rel="noopener">
-              <div class="news-tag">RACE WEEKEND</div>
-              <div class="news-card-date">May 7, 2026</div>
-              <h2 class="news-card-title">Media Day Dispatch: Hot off the press from Le Mans on Thursday</h2>
-              <p class="news-card-excerpt">Everything you need to catch up on ahead of the opening day of action at the French Grand Prix in Le Mans.</p>
-              <span class="news-read-more">Read on MotoGP.com →</span>
-            </a>
+            <article class="news-article-card" id="news-1">
+              <div class="news-article-header" onclick="toggleArticle('news-1')">
+                <div class="news-article-meta">
+                  <span class="news-tag">RACE WEEKEND</span>
+                  <span class="news-article-date">May 7, 2026 · motogp.com</span>
+                </div>
+                <h2 class="news-article-title">Media Day Dispatch: Hot off the press from Le Mans on Thursday</h2>
+                <p class="news-article-teaser">Everything you need to catch up on ahead of the opening day of action at the 2026 French Grand Prix in Le Mans.</p>
+                <div class="news-toggle-btn"><span class="news-toggle-icon">▾</span> Read article</div>
+              </div>
+              <div class="news-article-body">
+                <p>The MotoGP paddock arrived at the iconic Circuit de la Sarthe on Thursday for the traditional pre-event Media Day ahead of the 2026 French Grand Prix — Round 5 of the season.</p>
+                <p>Championship leader <strong>Marco Bezzecchi</strong> arrived fresh from the Aprilia Jerez Test where he and teammate Jorge Martín made significant progress. Bezzecchi holds a comfortable lead at the top of the standings and is targeting another podium finish in France.</p>
+                <p><strong>Marc Márquez</strong>, reigning World Champion, reflected on the recent test and admitted that the Ducati team has "a few things to improve" before they can think realistically about retaking the championship lead from Bezzecchi.</p>
+                <p>Meanwhile, <strong>Fabio Quartararo</strong> and <strong>Johann Zarco</strong> — the two French riders on the grid — were in buoyant mood ahead of their home race, with Zarco returning as the defending French GP winner.</p>
+                <p>A notable storyline heading into the weekend is the injury replacement of <strong>Maverick Viñales</strong>, with German rider <strong>Jonas Folger</strong> stepping in for the Red Bull KTM Tech3 team. Folger last appeared in MotoGP in 2023 as a wildcard and described the challenge as "huge."</p>
+                <p>Friday brings the first on-track action with two Free Practice sessions, where riders will begin fine-tuning their setups for the unpredictable Le Mans conditions. Rain is always a possibility in northern France in May.</p>
+                <a href="https://www.motogp.com/en/news/2026/05/07/media-day-dispatch-hot-off-the-press-from-le-mans-on-thursday/1064611" target="_blank" rel="noopener" class="news-source-link">Read original on MotoGP.com ↗</a>
+              </div>
+            </article>
 
-            <a class="news-card" href="https://www.motogp.com/en/news/2026/05/07/motogp-full-gas-on-servustv-until-2030/1064422" target="_blank" rel="noopener">
-              <div class="news-tag">BROADCAST</div>
-              <div class="news-card-date">May 7, 2026</div>
-              <h2 class="news-card-title">MotoGP™ Full Gas on ServusTV Until 2030</h2>
-              <p class="news-card-excerpt">The Salzburg-based private broadcaster will remain the exclusive Austrian TV partner of the world's most spectacular motorcycle racing series until 2030.</p>
-              <span class="news-read-more">Read on MotoGP.com →</span>
-            </a>
+            <article class="news-article-card" id="news-2">
+              <div class="news-article-header" onclick="toggleArticle('news-2')">
+                <div class="news-article-meta">
+                  <span class="news-tag">BROADCAST</span>
+                  <span class="news-article-date">May 7, 2026 · motogp.com</span>
+                </div>
+                <h2 class="news-article-title">MotoGP™ Full Gas on ServusTV Until 2030</h2>
+                <p class="news-article-teaser">The Salzburg-based private broadcaster extends as the exclusive Austrian TV partner of MotoGP for four more years.</p>
+                <div class="news-toggle-btn"><span class="news-toggle-icon">▾</span> Read article</div>
+              </div>
+              <div class="news-article-body">
+                <p>MotoGP and ServusTV have confirmed a long-term broadcast extension that will see the Austrian private television network remain the exclusive home of MotoGP in Austria until the end of the <strong>2030 season</strong>.</p>
+                <p>The Salzburg-based broadcaster, part of the Red Bull Media House group, has been broadcasting MotoGP in Austria for several years and this new deal ensures continuity for Austrian fans who have grown to love the sport through ServusTV's coverage.</p>
+                <p>The agreement covers all classes — MotoGP, Moto2, and Moto3 — along with the full race weekend sessions including practice, qualifying, Sprint races, and the main Grand Prix events.</p>
+                <p>This announcement is part of a broader push by Dorna Sports to lock in long-term broadcast partnerships across Europe, ensuring MotoGP retains free-to-air and premium TV coverage across key markets throughout the decade.</p>
+                <a href="https://www.motogp.com/en/news/2026/05/07/motogp-full-gas-on-servustv-until-2030/1064422" target="_blank" rel="noopener" class="news-source-link">Read original on MotoGP.com ↗</a>
+              </div>
+            </article>
 
-            <a class="news-card" href="https://www.motogp.com/en/news/2026/05/06/destination-le-mans-frances-unsung-medieval-city-hosts-motogp-frenzy/1064331" target="_blank" rel="noopener">
-              <div class="news-tag">DESTINATION</div>
-              <div class="news-card-date">May 6, 2026</div>
-              <h2 class="news-card-title">Destination Le Mans: France's Unsung Medieval City Hosts MotoGP Frenzy</h2>
-              <p class="news-card-excerpt">Motorsport fan? MotoGP fan? Off-the-beaten-path travel fan? Discover why Le Mans is the perfect backdrop for Round 5 of the 2026 season.</p>
-              <span class="news-read-more">Read on MotoGP.com →</span>
-            </a>
+            <article class="news-article-card" id="news-3">
+              <div class="news-article-header" onclick="toggleArticle('news-3')">
+                <div class="news-article-meta">
+                  <span class="news-tag">DESTINATION</span>
+                  <span class="news-article-date">May 6, 2026 · motogp.com</span>
+                </div>
+                <h2 class="news-article-title">Destination Le Mans: France's Unsung Medieval City Hosts MotoGP Frenzy</h2>
+                <p class="news-article-teaser">From its medieval old town to the legendary circuit — why Le Mans is far more than just a racetrack.</p>
+                <div class="news-toggle-btn"><span class="news-toggle-icon">▾</span> Read article</div>
+              </div>
+              <div class="news-article-body">
+                <p>While the world knows Le Mans for motorsport, the city itself is one of France's most captivating yet underrated destinations. Tucked in the Sarthe department in the Pays de la Loire region, Le Mans boasts a remarkably preserved <strong>medieval old town</strong> — the Cité Plantagenêt — that transports visitors back to the 9th century.</p>
+                <p>The city's cathedral, <strong>Saint-Julien du Mans</strong>, is considered one of the finest examples of Gothic and Romanesque architecture in France, with flying buttresses visible from across the city. The old town walls date back to the 3rd century AD, making Le Mans one of the most historically layered cities in western France.</p>
+                <p>For MotoGP fans making the trip for the French GP, the city offers a compact and walkable experience. The circuit itself, the <strong>Circuit de la Sarthe</strong>, is just a short drive from the city centre and is famous globally as the home of the 24 Hours of Le Mans endurance race — one of motorsport's ultimate challenges.</p>
+                <p>Local restaurants and brasseries serve the regional specialty <em>rillettes du Mans</em> — a slow-cooked pork pâté that locals are fiercely proud of. Street festivals and live music typically accompany the race weekend, creating an atmosphere unlike any other on the MotoGP calendar.</p>
+                <a href="https://www.motogp.com/en/news/2026/05/06/destination-le-mans-frances-unsung-medieval-city-hosts-motogp-frenzy/1064331" target="_blank" rel="noopener" class="news-source-link">Read original on MotoGP.com ↗</a>
+              </div>
+            </article>
 
-            <a class="news-card" href="https://www.motogp.com/en/news/2026/05/05/motogp-fan-fest-lands-in-barcelona/1064176" target="_blank" rel="noopener">
-              <div class="news-tag">FAN EVENT</div>
-              <div class="news-card-date">May 5, 2026</div>
-              <h2 class="news-card-title">MotoGP Fan Fest Lands in Barcelona!</h2>
-              <p class="news-card-excerpt">Ahead of the upcoming Catalan GP, the city's Plaça Catalunya hosts a brand-new way to immerse yourself in the most exciting sport on earth.</p>
-              <span class="news-read-more">Read on MotoGP.com →</span>
-            </a>
+            <article class="news-article-card" id="news-4">
+              <div class="news-article-header" onclick="toggleArticle('news-4')">
+                <div class="news-article-meta">
+                  <span class="news-tag">FAN EVENT</span>
+                  <span class="news-article-date">May 5, 2026 · motogp.com</span>
+                </div>
+                <h2 class="news-article-title">MotoGP Fan Fest Lands in Barcelona!</h2>
+                <p class="news-article-teaser">Ahead of the Catalan GP, Barcelona's iconic Plaça Catalunya hosts a brand-new immersive fan experience.</p>
+                <div class="news-toggle-btn"><span class="news-toggle-icon">▾</span> Read article</div>
+              </div>
+              <div class="news-article-body">
+                <p>MotoGP is taking its fan engagement to the streets of Barcelona ahead of the 2026 Catalan Grand Prix with the launch of the first-ever <strong>MotoGP Fan Fest</strong>.</p>
+                <p>The event, set in the heart of the city at the <strong>Plaça Catalunya</strong> — one of Barcelona's most iconic public squares — will run across several days leading up to the Grand Prix weekend. It promises interactive experiences, live demonstrations, and a chance for fans to get up close with MotoGP machinery.</p>
+                <p>Activities planned include simulator stations, rider meet-and-greet sessions, merchandise and memorabilia displays, and live screenings of previous classic Catalan GP moments. Local food vendors and entertainers will also be present throughout the event.</p>
+                <p>MotoGP stated that the Fan Fest is designed to bring the excitement of Grand Prix racing directly into the city centre, making it accessible for fans who may not have tickets to the circuit itself. Entry is free and open to the public.</p>
+                <p>This initiative is part of a broader effort to grow MotoGP's fanbase in urban centres across Europe, building on the success of similar fan events trialled at other major motorsport series.</p>
+                <a href="https://www.motogp.com/en/news/2026/05/05/motogp-fan-fest-lands-in-barcelona/1064176" target="_blank" rel="noopener" class="news-source-link">Read original on MotoGP.com ↗</a>
+              </div>
+            </article>
 
           </div>
-          <div style="text-align:center;margin-top:32px;">
-            <a href="https://www.motogp.com/en/news" target="_blank" rel="noopener" class="btn btn-ghost">View All News on MotoGP.com ↗</a>
+        </div>
+      </div>
+
+      <!-- TEAMS PAGE -->
+      <div id="page-teams" class="page">
+        <div class="page-inner">
+          <div class="section-header">
+            <h1 class="section-title">2026 TEAMS</h1>
+            <p class="section-sub">All 11 teams on the MotoGP grid</p>
           </div>
+          <div id="teams-grid"></div>
         </div>
       </div>
 
@@ -288,6 +345,44 @@
     </div>
   </div>
 
+  <!-- LIVE DISCUSSION MODAL -->
+  <div id="live-discussion-modal" class="modal-overlay" style="display:none;">
+    <div class="modal-box modal-wide modal-chat">
+      <button class="modal-close" id="live-modal-close">✕</button>
+
+      <!-- Admin controls -->
+      <div id="chat-admin-panel" class="chat-admin-panel" style="display:none;">
+        <input type="text" id="new-disc-title" placeholder="Discussion title, e.g. French GP Live 🏁" maxlength="80">
+        <button class="btn btn-primary" id="admin-open-disc-btn">Open Discussion</button>
+        <button class="btn btn-ghost" id="admin-close-disc-btn" style="display:none;">Close Discussion</button>
+      </div>
+
+      <h2 class="modal-title chat-room-title" id="chat-title">Live Discussion</h2>
+
+      <!-- Closed state -->
+      <div id="chat-closed-notice" class="chat-closed-notice" style="display:none;">
+        <div class="empty-icon">🔒</div>
+        <p>No live discussion is currently open.</p>
+        <p style="font-size:0.85rem;color:var(--text-dim);margin-top:6px;">An admin can open one from the session card in the sidebar.</p>
+      </div>
+
+      <!-- Messages container -->
+      <div id="chat-messages" class="chat-messages"></div>
+
+      <!-- Input -->
+      <div id="chat-input-wrap" class="chat-input-wrap" style="display:none;">
+        <div class="chat-input-row">
+          <input type="text" id="chat-input" placeholder="Join the discussion..." maxlength="300" autocomplete="off">
+          <button class="btn btn-primary" id="chat-send-btn">Send</button>
+        </div>
+      </div>
+
+      <div id="chat-login-prompt" class="guest-prompt" style="display:none;">
+        <p>Log in to join the live discussion.</p>
+      </div>
+    </div>
+  </div>
+
   <!-- TOAST -->
   <div id="toast" class="toast" style="display:none;"></div>
 
@@ -296,6 +391,8 @@
   <script src="/js/auth.js"></script>
   <script src="/js/posts.js"></script>
   <script src="/js/drivers.js"></script>
+  <script src="/js/teams.js"></script>
+  <script src="/js/live.js"></script>
   <script src="/js/app.js"></script>
 </body>
 </html>

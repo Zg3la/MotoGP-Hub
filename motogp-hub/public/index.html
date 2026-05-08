@@ -31,6 +31,7 @@
         <div class="nav-links" id="nav-links">
           <a href="#" class="nav-link active" data-page="feed">Feed</a>
           <a href="#" class="nav-link" data-page="drivers">Drivers</a>
+          <a href="#" class="nav-link" data-page="news">News</a>
           <a href="#" class="nav-link admin-only" data-page="admin" id="admin-nav-link" style="display:none;">⚙ Admin</a>
         </div>
         <div class="nav-actions">
@@ -95,10 +96,33 @@
               <div id="sidebar-drivers"></div>
             </div>
             <div class="sidebar-card sidebar-stats">
-              <h3 class="sidebar-title">2025 SEASON</h3>
-              <div class="stat-row"><span>Round</span><strong>7 / 20</strong></div>
-              <div class="stat-row"><span>Next Race</span><strong>Le Mans</strong></div>
+              <h3 class="sidebar-title">2026 SEASON</h3>
+              <div class="stat-row"><span>Round</span><strong>5 / 22</strong></div>
+              <div class="stat-row"><span>Current Race</span><strong>Le Mans 🇫🇷</strong></div>
               <div class="stat-row"><span>Category</span><strong>MotoGP</strong></div>
+              <div class="stat-row"><span>Leader</span><strong>Bezzecchi 🏆</strong></div>
+            </div>
+
+            <!-- CURRENT SESSION CARD -->
+            <div class="sidebar-card session-card" id="current-session-card">
+              <div class="session-live-badge"><span class="live-dot"></span>LIVE WEEKEND</div>
+              <h3 class="sidebar-title" style="margin-top:10px;">FRENCH GP 2026</h3>
+              <div class="session-circuit">Circuit de la Sarthe · Le Mans</div>
+              <div class="session-info-rows">
+                <div class="session-info-row">
+                  <span class="session-label">🗓️ Date</span>
+                  <strong>May 8–11, 2026</strong>
+                </div>
+                <div class="session-info-row">
+                  <span class="session-label">📍 Round</span>
+                  <strong>Round 5 of 22</strong>
+                </div>
+                <div class="session-info-row">
+                  <span class="session-label">📡 Today</span>
+                  <strong>FP1 &amp; FP2 – Friday</strong>
+                </div>
+              </div>
+              <a href="https://www.motogp.com/en/calendar/2026/event/france/4237f175-c6a4-4d1e-b658-82962baf3fa3/race-centre" target="_blank" rel="noopener" class="btn btn-primary session-btn">🏁 Race Centre</a>
             </div>
           </aside>
         </div>
@@ -119,6 +143,54 @@
       <div id="page-profile" class="page">
         <div class="page-inner">
           <div id="profile-content"></div>
+        </div>
+      </div>
+
+      <!-- NEWS PAGE -->
+      <div id="page-news" class="page">
+        <div class="page-inner">
+          <div class="section-header">
+            <h1 class="section-title">LATEST NEWS</h1>
+            <p class="section-sub">Fresh from MotoGP.com</p>
+          </div>
+          <div class="news-grid">
+
+            <a class="news-card" href="https://www.motogp.com/en/news/2026/05/07/media-day-dispatch-hot-off-the-press-from-le-mans-on-thursday/1064611" target="_blank" rel="noopener">
+              <div class="news-tag">RACE WEEKEND</div>
+              <div class="news-card-date">May 7, 2026</div>
+              <h2 class="news-card-title">Media Day Dispatch: Hot off the press from Le Mans on Thursday</h2>
+              <p class="news-card-excerpt">Everything you need to catch up on ahead of the opening day of action at the French Grand Prix in Le Mans.</p>
+              <span class="news-read-more">Read on MotoGP.com →</span>
+            </a>
+
+            <a class="news-card" href="https://www.motogp.com/en/news/2026/05/07/motogp-full-gas-on-servustv-until-2030/1064422" target="_blank" rel="noopener">
+              <div class="news-tag">BROADCAST</div>
+              <div class="news-card-date">May 7, 2026</div>
+              <h2 class="news-card-title">MotoGP™ Full Gas on ServusTV Until 2030</h2>
+              <p class="news-card-excerpt">The Salzburg-based private broadcaster will remain the exclusive Austrian TV partner of the world's most spectacular motorcycle racing series until 2030.</p>
+              <span class="news-read-more">Read on MotoGP.com →</span>
+            </a>
+
+            <a class="news-card" href="https://www.motogp.com/en/news/2026/05/06/destination-le-mans-frances-unsung-medieval-city-hosts-motogp-frenzy/1064331" target="_blank" rel="noopener">
+              <div class="news-tag">DESTINATION</div>
+              <div class="news-card-date">May 6, 2026</div>
+              <h2 class="news-card-title">Destination Le Mans: France's Unsung Medieval City Hosts MotoGP Frenzy</h2>
+              <p class="news-card-excerpt">Motorsport fan? MotoGP fan? Off-the-beaten-path travel fan? Discover why Le Mans is the perfect backdrop for Round 5 of the 2026 season.</p>
+              <span class="news-read-more">Read on MotoGP.com →</span>
+            </a>
+
+            <a class="news-card" href="https://www.motogp.com/en/news/2026/05/05/motogp-fan-fest-lands-in-barcelona/1064176" target="_blank" rel="noopener">
+              <div class="news-tag">FAN EVENT</div>
+              <div class="news-card-date">May 5, 2026</div>
+              <h2 class="news-card-title">MotoGP Fan Fest Lands in Barcelona!</h2>
+              <p class="news-card-excerpt">Ahead of the upcoming Catalan GP, the city's Plaça Catalunya hosts a brand-new way to immerse yourself in the most exciting sport on earth.</p>
+              <span class="news-read-more">Read on MotoGP.com →</span>
+            </a>
+
+          </div>
+          <div style="text-align:center;margin-top:32px;">
+            <a href="https://www.motogp.com/en/news" target="_blank" rel="noopener" class="btn btn-ghost">View All News on MotoGP.com ↗</a>
+          </div>
         </div>
       </div>
 

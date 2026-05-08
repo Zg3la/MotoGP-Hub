@@ -32,6 +32,9 @@ const Router = (() => {
       document.getElementById('page-drivers').classList.add('active');
       document.querySelector('[data-page="drivers"]')?.classList.add('active');
       Drivers.loadGrid();
+    } else if (page === 'news') {
+      document.getElementById('page-news').classList.add('active');
+      document.querySelector('[data-page="news"]')?.classList.add('active');
     } else if (page === 'admin') {
       const user = Auth.getUser();
       if (!user || user.role !== 'admin') { Router.navigate('feed'); return; }
